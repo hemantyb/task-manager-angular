@@ -1,0 +1,11 @@
+<div class="bg-slate-100 border border-slate-400 p-3 rounded mt-4">
+  {{ taskItem().task }}
+
+  <div class="flex justify-around">
+    @for (action of action(); track $index) {
+    <button (click)="markAs(taskItem().task, action)" class="px-2 py-1 text-xs border rounded">
+      {{ action }}
+    </button>
+    }
+  </div>
+</div>

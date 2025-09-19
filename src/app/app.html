@@ -4,7 +4,7 @@
 
 <div class="grid grid-cols-4 gap-4 px-4">
   <app-task-form></app-task-form>
-  <app-task-list [heading]="'Todo'"></app-task-list>
-  <app-task-list [heading]="'In Progress'"></app-task-list>
-  <app-task-list [heading]="'Completed'"></app-task-list>
+  <app-task-list [heading]="'Todo'" [tasks]="todoItems()"></app-task-list>
+  <app-task-list [heading]="'In Progress'" [tasks]="inProgressItems()"></app-task-list>
+  <app-task-list [heading]="'Completed'" [tasks]="completedItems()"></app-task-list>
 </div>

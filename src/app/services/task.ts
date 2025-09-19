@@ -12,4 +12,16 @@ export class Task {
       return [...prev, { task, status }];
     });
   }
+
+  markAsStatus(text: string, updatedStatus: string) {
+    this.tasks.update((prev) => {
+      const findTask = prev.find((x) => x.task === text);
+
+      if (findTask) {
+        return [...prev.filter((x) => x.task !== text), { task: text, status: updatedStatus }];
+      } else {
+        return prev;
+      }
+    });
+  }
 }
